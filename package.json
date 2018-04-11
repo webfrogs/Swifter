@@ -1,6 +1,6 @@
 {
-    "name": "swifty",
-    "displayName": "Swifty",
+    "name": "swifter",
+    "displayName": "Swifter",
     "description": "Swift language development environment.",
     "author": {
         "name": "Carl Chen",
@@ -11,22 +11,27 @@
     "version": "0.0.1",
     "publisher": "nswebfrog",
     "engines": {
-        "vscode": "^1.8.0"
+        "vscode": "^1.16.0"
     },
     "categories": [
         "Languages"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onLanguage:swift"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+        "configuration": {
+            "type": "object",
+            "title": "Swifter options",
+            "properties": {
+                "swifter.languageServerPath": {
+                    "type": "string",
+                    "default": "/usr/local/bin/swift-nest",
+                    "description": "Path to swift language server used by swifter extension."
+                }
             }
-        ]
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -41,5 +46,8 @@
         "tslint": "^5.8.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^3.5.1"
     }
 }
