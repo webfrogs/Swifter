@@ -1,15 +1,16 @@
 {
     "name": "swifter",
     "displayName": "Swifter",
-    "description": "Swift language development environment.",
+    "description": "Swift language support for Visual Studio Code.",
+    "icon": "images/swift-logo.png",
     "author": {
         "name": "Carl Chen",
         "email": "ccf.developer@gmail.com",
         "url": "https://github.com/webfrogs"
     },
-    "license": "Apache-2.0",
+    "license": "MIT",
     "version": "0.0.1",
-    "publisher": "nswebfrog",
+    "publisher": "Carl Chen",
     "engines": {
         "vscode": "^1.16.0"
     },

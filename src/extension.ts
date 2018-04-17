@@ -8,7 +8,7 @@ import { Executable, ServerOptions, LanguageClientOptions, LanguageClient } from
 // your extension is activated the very first time the command is executed
 export function activate(context: ExtensionContext) {
 
-    console.log('Congratulations, your extension "swifter" is now active!');
+    console.log('Extension "Swifter" is now active!');
 
     let serverCommand: string = workspace.getConfiguration("swifter")
         .get("languageServerPath")
