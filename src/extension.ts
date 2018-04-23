@@ -4,14 +4,14 @@
 import { workspace, ExtensionContext, window } from 'vscode'
 import { Executable, ServerOptions, LanguageClientOptions, LanguageClient } from 'vscode-languageclient'
 import fs = require('fs')
-import { installSwiftNest } from './swiftNest'
+import { installSwiftNest, checkSwiftNestVersion, getSwiftNestPath } from './swiftNest'
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: ExtensionContext) {
-    console.log('Extension "Swifter" is now active!');
-    let serverCommand: string = workspace.getConfiguration("swifter")
-        .get("languageServerPath")
+    console.log('Extension "Swifter" is now active!')
+
+    let serverCommand = getSwiftNestPath()
     
     if (!fileExists(serverCommand)) {
         window.showInformationMessage('Cannot find Swift Language Server. Install SwiftNest?', 'No', 'Yes')
@@ -42,6 +42,8 @@ export function activate(context: ExtensionContext) {
         let client = new LanguageClient('swift', serverOption, clientOptions)
     
         context.subscriptions.push(client.start())
+
+        checkSwiftNestVersion()
     }
     
 }

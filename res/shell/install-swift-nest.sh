@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+TAG_INFO=$1
+
 case "$(uname -s)" in
 	Darwin)
 		;;
@@ -35,6 +37,11 @@ cd "${TEMP_FOLDER_PATH}"
 
 git clone https://github.com/webfrogs/SwiftNest.git
 cd SwiftNest
+if [ -n "${TAG_INFO}" ]; then
+    git reset --hard ${TAG_INFO}
+else
+    git reset --hard master
+fi
 echo "Start to fetch libraries then build SwiftNest..."
 make install
 

@@ -17,6 +17,10 @@
     "categories": [
         "Languages"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/webfrogs/Swifter"
+    },
     "activationEvents": [
         "onLanguage:swift"
     ],
@@ -49,6 +53,8 @@
         "@types/mocha": "^2.2.42"
     },
     "dependencies": {
+        "request": "^2.85.0",
+        "semver": "^5.5.0",
         "vscode-languageclient": "^3.5.1"
     }
 }
