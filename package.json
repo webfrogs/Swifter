@@ -2,7 +2,7 @@
     "name": "swifter",
     "displayName": "Swifter",
     "description": "Swift language support for Visual Studio Code.",
-    "icon": "images/swift-logo.png",
+    "icon": "res/images/swift-logo.png",
     "author": {
         "name": "Carl Chen",
         "email": "ccf.developer@gmail.com",
@@ -10,9 +10,9 @@
     },
     "license": "MIT",
     "version": "0.0.1",
-    "publisher": "Carl Chen",
+    "publisher": "nswebfrog",
     "engines": {
-        "vscode": "^1.16.0"
+        "vscode": "^1.22.0"
     },
     "categories": [
         "Languages"
