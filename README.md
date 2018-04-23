@@ -12,7 +12,7 @@ You should install a language server before use this extension.
 
 I'm making a tool called 'SwiftNest' which implement the VS Code's Language Server Protocol for swift, you can use it.
 
-See how to install 'SwiftNest': <https://github.com/webfrogs/SwiftNest> 
+This extension will show installation information when you open a swift file. 'SwiftNest' can be installed automatically after you choose 'YES'. If you want to install it manually, goto the opensource github repository: <https://github.com/webfrogs/SwiftNest>
 
 ## Extension Settings
 
@@ -23,3 +23,7 @@ This extension contributes the following settings:
 ## Issues
 
 Open a github issue if you find a bug: <https://github.com/webfrogs/Swifter/issues/new>
+
+## License
+
+MIT licensed.
